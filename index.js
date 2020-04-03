@@ -1,3 +1,16 @@
 var rect = require('./rectangle')
-console.log(rect.area(2,3))
-console.log(rect.perimeter(2,3))
+function calculate(l,b)
+    {
+           rect(l,b,(err,rectangle)=>
+           {
+              if(err)
+              console.log(err.message)
+              console.log(rectangle.area(),rectangle.perimeter())
+           });
+           console.log('after execution')
+    }
+   
+
+    calculate(2,3)
+    calculate(3,4)
+    calculate(1,2)
